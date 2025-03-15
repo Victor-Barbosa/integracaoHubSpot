@@ -22,9 +22,11 @@ public class HubSpotCallbackController {
     public ResponseEntity<String> handleOAuthCallback(
             @RequestParam("code") @NotBlank String code) {
         try {
+            log.info("Código de autorização recebido");
             tokenService.getAccessToken(code);
             return ResponseEntity.ok("Autorização concluída");
         } catch (IllegalArgumentException ex) {
+            log.warn("Código de autorização inválido");
             return ResponseEntity.badRequest().body("Código de autorização inválido");
         } catch (Exception ex) {
             log.error("Erro ao processar o callback: {}", ex.getMessage(), ex);

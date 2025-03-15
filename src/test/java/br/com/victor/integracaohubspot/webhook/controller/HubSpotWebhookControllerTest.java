@@ -29,12 +29,6 @@ class HubSpotWebhookControllerTest {
 
     @Test
     void testContactCreatedWebhookSuccess() throws Exception {
-        List<EventDTO> events = List.of(new EventDTO(
-                123L, 456L, 789L, 101112L, 161718L,
-                "SUBSCRIPTION_TYPE", 1, 192021L,
-                "SOURCE", "CHANGE_FLAG"
-        ));
-
         Mockito.doNothing().when(webhookService).processEvents(Mockito.anyList());
 
         String requestBody = """
@@ -65,12 +59,6 @@ class HubSpotWebhookControllerTest {
 
     @Test
     void testContactCreatedWebhookFailure() throws Exception {
-        List<EventDTO> events = List.of(new EventDTO(
-                123L, 456L, 789L, 101112L, 161718L,
-                "SUBSCRIPTION_TYPE", 1, 192021L,
-                "SOURCE", "CHANGE_FLAG"
-        ));
-
         Mockito.doThrow(new RuntimeException("Processing error")).when(webhookService).processEvents(Mockito.anyList());
 
         String requestBody = """

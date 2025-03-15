@@ -16,10 +16,13 @@ public class ContactDTO {
     @NotEmpty(message = "O e-mail não pode estar vazio")
     private final String email;
 
-    public ContactDTO(String firstName, String lastName, String email) {
+    private final String phone;
+
+    public ContactDTO(String firstName, String lastName, String email, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phone = phone;
     }
 
     public String getFirstName() {
@@ -34,15 +37,12 @@ public class ContactDTO {
         return email;
     }
 
-    /**
-     * Converte o DTO para o formato Map<String, Object>.
-     * Pode ser usado diretamente pelo serviço HubSpotContactService.
-     */
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<>();
         map.put("firstname", this.firstName);
         map.put("lastname", this.lastName);
         map.put("email", this.email);
+        map.put("phone", this.phone);
         return map;
     }
 }

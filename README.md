@@ -175,11 +175,11 @@ logar na Conta de teste do desenvolvedor do HubSpot e autorizar o app. Após aut
    --url https://localhost:8443/contacts \
    --header 'Content-Type: application/json' \
    --data '{
-   "email": "Victor@hubspot.com",
-   "firstname": "Victor",
-   "lastname": "Barbosa",
-   "phone": "(555) 222-5555"
-   }'
+	"email": "Victor@hubspot.com",
+	"firstName": "Victor",
+    "lastnNme": "Barbosa",
+    "phone": "(555) 222-5555"
+}'
 ```
 ## **Testes**
 - **Testes**:

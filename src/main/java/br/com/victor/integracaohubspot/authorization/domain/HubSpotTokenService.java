@@ -38,7 +38,7 @@ public class HubSpotTokenService {
                     formBody
             );
 
-            log.info("Resposta recebida: {}", response);
+            log.info("Resposta com o token obtida");
 
             currentToken = new AuthToken(
                     (String) response.get("access_token"),
@@ -48,7 +48,7 @@ public class HubSpotTokenService {
 
             return currentToken;
         } catch (Exception e) {
-            log.error("Erro ao trocar code por token:", e);
+            log.error("Erro ao trocar o código por um token:", e);
             throw e;
 
         }
