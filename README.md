@@ -130,21 +130,11 @@ Substitua `<SEU_AUTHTOKEN>` pelo token copiado no painel da sua conta do ngrok.
 1. Salve as alterações e crie um subscription para contact.creation.
 Obs: Talvez seja necessario ativar o Event subscriptions caso não fique ativo automaticamente
 
-### **6. Iniciar a Aplicação Local**
-Certifique-se de que a aplicação esteja rodando localmente na porta `8443` para que o webhook seja entregue corretamente ao endpoint configurado. Use o seguinte comando no terminal para garantir que o servidor local esteja ativo:
-``` bash
-./gradlew bootRun
-```
-
-Outras configurações podem incluir:
-- Informações adicionais baseadas no OAuth2.
-- Limites para implementação de Bucket4j, se for configurado dinamicamente.
-
 ## **Como Executar a Aplicação**
 ### 1. **Baixar as Dependências**
 No terminal, na raiz do projeto, execute:
 ``` bash
-./gradlew build
+./gradlew clean build
 ```
 Isto:
 - Baixará e configurará todas as dependências necessárias;
