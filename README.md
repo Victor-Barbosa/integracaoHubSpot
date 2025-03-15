@@ -192,4 +192,4 @@ logar na Conta de teste do desenvolvedor do HubSpot e autorizar o app. Após aut
 - Ajustar o endpoint de cadastro de contato para:
     - Buscar o **accessToken** e realizar o cadastro do contato.
     - Caso a API do HubSpot retorne que o **accessToken** expirou, o endpoint de cadastro deverá acionar o novo **controller** para atualizar o **accessToken** e tentar reenviar o cadastro do contato.
- 
+- Ajustar o contactDTO para incluir as informações completas de um contato.
