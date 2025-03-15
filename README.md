@@ -177,7 +177,7 @@ logar na Conta de teste do desenvolvedor do HubSpot e autorizar o app. Após aut
    --data '{
 	"email": "Victor@hubspot.com",
 	"firstName": "Victor",
-    "lastnNme": "Barbosa",
+    "lastName": "Barbosa",
     "phone": "(555) 222-5555"
 }'
 ```
