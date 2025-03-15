@@ -25,18 +25,6 @@ public class ContactDTO {
         this.phone = phone;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<>();
         map.put("firstname", this.firstName);

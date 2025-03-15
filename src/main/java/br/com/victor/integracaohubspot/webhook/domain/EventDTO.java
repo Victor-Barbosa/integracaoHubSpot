@@ -1,5 +1,8 @@
 package br.com.victor.integracaohubspot.webhook.domain;
 
+import lombok.Getter;
+
+@Getter
 public class EventDTO {
 
     private Long appId;
@@ -38,47 +41,6 @@ public class EventDTO {
         this.objectId = objectId;
         this.changeSource = changeSource;
         this.changeFlag = changeFlag;
-    }
-
-    // Getters
-    public Long getAppId() {
-        return appId;
-    }
-
-    public Long getEventId() {
-        return eventId;
-    }
-
-    public Long getSubscriptionId() {
-        return subscriptionId;
-    }
-
-    public Long getPortalId() {
-        return portalId;
-    }
-
-    public Long getOccurredAt() {
-        return occurredAt;
-    }
-
-    public String getSubscriptionType() {
-        return subscriptionType;
-    }
-
-    public Integer getAttemptNumber() {
-        return attemptNumber;
-    }
-
-    public Long getObjectId() {
-        return objectId;
-    }
-
-    public String getChangeSource() {
-        return changeSource;
-    }
-
-    public String getChangeFlag() {
-        return changeFlag;
     }
 
     @Override
